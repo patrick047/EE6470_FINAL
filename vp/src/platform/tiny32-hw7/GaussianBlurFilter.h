@@ -61,9 +61,10 @@ GaussianBlurFilter(sc_module_name n):
                 }
             }   
             counter++;
-            o_r.write((unsigned char)(R/factor));
-            o_g.write((unsigned char)(G/factor));
-            o_b.write((unsigned char)(B/factor));
+            sc_uint<32> grey=(R+G+B)/3;
+            o_r.write((unsigned char)(grey/factor));
+            o_g.write((unsigned char)(grey/factor));
+            o_b.write((unsigned char)(grey/factor));
         }
     }
 
