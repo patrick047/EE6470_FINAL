@@ -58,7 +58,7 @@ GaussianBlurFilter(sc_module_name n):
 
                 }
             }   
-            sc_uint<32> grey=(R+G+B)/3;
+            unsigned char grey=(R+G+B)/3;
             o_r.write((unsigned char)(grey/factor));
             o_g.write((unsigned char)(grey/factor));
             o_b.write((unsigned char)(grey/factor));
